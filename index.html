@@ -1,32 +1,18 @@
 <!DOCTYPE html>
 <html lang="EN">
 <head>
-  <meta charset="UTF-8" />
-  <title>دانلود پورتفولیو</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      background-color: #f5f5f5;
-      text-align: center;
-      padding-top: 100px;
+  <meta charset="UTF-8">
+  <title>Omid Ahmadnejad Portfolio</title>
+  <script>
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+      window.location.href = "mobile.html";
+    } else {
+      window.location.href = "portfolio.pdf";
     }
-    a {
-      display: inline-block;
-      background-color: #131333;
-      color: white;
-      padding: 14px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 18px;
-    }
-    a:hover {
-      background-color: #3e5962;
-    }
-  </style>
+  </script>
 </head>
 <body>
-  <h1>نمایش پورتفولیو ممکن است در موبایل محدود باشد</h1>
-  <p>برای مشاهده کامل، فایل را دانلود کنید:</p>
-  <a href="portfolio.pdf" download>دانلود فایل PDF</a>
+  <p>در حال هدایت به پورتفولیو...</p>
 </body>
 </html>
