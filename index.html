@@ -1,16 +1,55 @@
 <!DOCTYPE html>
 <html lang="EN">
 <head>
-  <meta charset="UTF-8">
-  <title>در حال هدایت به پورتفولیو...</title>
+  <meta charset="UTF-8" />
+  <title>در حال هدایت...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #131333;
+      color: white;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .loader {
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #c8a042;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .text {
+      font-size: 18px;
+      color: #f5f5f5;
+    }
+  </style>
   <script>
-    // تشخیص موبایل
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    // ریدایرکت مستقیم به فایل PDF
-    window.location.href = "portfolio.pdf";
+    // بعد از چند ثانیه ریدایرکت به فایل PDF
+    setTimeout(() => {
+      window.location.href = "portfolio.pdf";
+    }, 1500); // زمان قابل تغییر (می‌تونی کمتر یا بیشتر کنی)
   </script>
 </head>
 <body>
-  <p>در حال هدایت به پورتفولیو...</p>
+  <div class="loader"></div>
+  <div class="text">در حال بارگذاری پورتفولیو...</div>
 </body>
 </html>
